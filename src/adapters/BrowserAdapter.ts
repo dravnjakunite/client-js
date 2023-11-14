@@ -29,8 +29,9 @@ export default class BrowserAdapter implements fhirclient.Adapter
 
     /**
      * @param options Environment-specific options
+     * @param storage BrowserStorage
      */
-    constructor(options: fhirclient.BrowserFHIRSettings = {})
+    constructor(options: fhirclient.BrowserFHIRSettings = {}, storage?: BrowserStorage)
     {
         this.options = {
             // Replaces the browser's current URL
@@ -65,6 +66,10 @@ export default class BrowserAdapter implements fhirclient.Adapter
 
             ...options
         };
+
+        if (storage) {
+            this._storage = storage
+        }
     }
 
     /**

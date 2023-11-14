@@ -14,3 +14,5 @@ post-launch/index.html
 .DS_Store
 coverage
 .nyc_output
+
+.idea

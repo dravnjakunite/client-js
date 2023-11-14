@@ -20,8 +20,9 @@ export default class BrowserAdapter implements fhirclient.Adapter {
     security: typeof security;
     /**
      * @param options Environment-specific options
+     * @param storage BrowserStorage
      */
-    constructor(options?: fhirclient.BrowserFHIRSettings);
+    constructor(options?: fhirclient.BrowserFHIRSettings, storage?: BrowserStorage);
     /**
      * Given a relative path, returns an absolute url using the instance base URL
      */
